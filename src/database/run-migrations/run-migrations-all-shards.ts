@@ -1,5 +1,7 @@
 import { shardDataSources } from "../shard-db-source";
 
+// Run migrations on all shard databases
+
 async function runMigrationsOnAllShards() {
   for (const ds of shardDataSources) {
     console.log(`Running migrations on ${ds.options.name}...`);

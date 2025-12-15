@@ -1,6 +1,6 @@
 import { Injectable, Inject, NotFoundException, ConflictException } from '@nestjs/common';
 import { Repository, DataSource } from 'typeorm';
-import { Tenant, TenantStatus } from '../../central-entities/tenant.entity';
+import { Tenant, TenantStatus } from '../../entities/central-entities/tenant.entity';
 import { CENTRAL_DATASOURCE } from './shard-provider';
 import { ShardRouterService } from './shard-router.service';
 import { HelperService } from 'src/common/helpers/helper.service';

@@ -1,6 +1,7 @@
-// src/database/run-migrations/run-central-migrations.ts
 
 import CentralDataSource from "../central-datasource";
+
+// Run central database migrations
 
 async function run() {
   try {

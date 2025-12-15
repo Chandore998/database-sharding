@@ -4,12 +4,14 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
+// Define multiple shard data sources
+
 export const shardDataSources = [
   new DataSource({
     name: 'shard0',
     type: 'postgres',
     url: process.env.DB_SHARD_0_URL,
-    entities: ['dist/shard-entities/*.entity{.ts,.js}'],
+    entities: ['dist/entities/shard-entities/*.entity{.ts,.js}'],
     migrationsTableName: "migrations",
     migrations: ['dist/migrations/shards/*.js'],
     synchronize: false,
@@ -19,7 +21,7 @@ export const shardDataSources = [
     name: 'shard1',
     type: 'postgres',
     url: process.env.DB_SHARD_1_URL,
-    entities: ['dist/shard-entities/*.entity{.ts,.js}'],
+    entities: ['dist/entities/shard-entities/*.entity{.ts,.js}'],
     migrationsTableName: "migrations",
     migrations: ['dist/migrations/shards/*.js'],
     synchronize: false,
@@ -29,7 +31,7 @@ export const shardDataSources = [
     name: 'shard2',
     type: 'postgres',
     url: process.env.DB_SHARD_2_URL,
-    entities: ['dist/shard-entities/*.entity{.ts,.js}'],
+    entities: ['dist/entities/shard-entities/*.entity{.ts,.js}'],
     migrationsTableName: "migrations",
     migrations: ['dist/migrations/shards/*.js'],
     synchronize: false,

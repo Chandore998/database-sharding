@@ -3,7 +3,7 @@ import { JwtService } from "@nestjs/jwt";
 import { Request } from "express";
 import { SystemConstants } from "../constant/system-constants";
 import { TenantService } from "src/modules/shard/tenant.service";
-import { TenantStatus } from "src/central-entities/tenant.entity";
+import { TenantStatus } from "src/entities/central-entities/tenant.entity";
 import { ConfigService } from "@nestjs/config";
 
 @Injectable()
